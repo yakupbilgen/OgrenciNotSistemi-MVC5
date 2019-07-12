@@ -18,7 +18,16 @@
         </div>
         <div style="margin-top:10px">
             <label>Öğrenci Cinsiyet</label>
-            <input class="form-control" type="text" name="OGRCinsiyet" />
+            @Html.DropDownList(
+           "Cinsiyet",
+           new[]
+           {
+               new SelectListItem() {Value="1",Text="Erkek"},
+               new SelectListItem() {Value="2",Text="Kız"},
+           },
+           "Cinsiyet Seçiniz",
+           new {@class="form-control"}
+           )
         </div>
         <div style="margin-top:10px">
             <label>Öğrenci Kulüp</label>
